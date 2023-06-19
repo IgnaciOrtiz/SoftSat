@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoftSat.Pages.VehiculosPage"
+             Title="Vehiculos"
+             BackgroundColor="#C5E4F5">
+    <StackLayout>
+        <ListView x:Name="ListVehiculos"
+                  ItemsSource="{Binding Vehiculo}"
+                  HasUnevenRows="true"
+                  ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Matricula}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

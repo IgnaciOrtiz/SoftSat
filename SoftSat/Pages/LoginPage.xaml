@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoftSat.Pages.LoginPage"
+             Title="LoginPage"
+             BackgroundColor="White"
+             Shell.FlyoutBehavior="Disabled"
+             Shell.TabBarIsVisible="False"
+             Shell.NavBarIsVisible="False">
+
+    <StackLayout Padding="50"            
+                     HorizontalOptions="FillAndExpand"
+                     Spacing="30">
+
+        <Image Source="logo2.png"
+                   WidthRequest="250"
+                   HeightRequest="250">
+        </Image>
+
+        <Entry Placeholder="Usuario"
+                   PlaceholderColor="Black"
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   x:Name="txtUsuario" />
+
+        <Entry Placeholder="Password"
+                   PlaceholderColor="Black"
+                   FontAttributes="Bold"
+                   IsPassword="True"
+                   TextColor="Black"
+                   x:Name="txtPassword"/>
+
+        <Button Text="Iniciar Sesión"
+                    TextColor="White"
+                    BackgroundColor="Blue"
+                    FontAttributes="Bold"                 
+                    BorderColor="Blue"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    Clicked="Button_ClickedAsync"/>
+    </StackLayout>
+
+</ContentPage>

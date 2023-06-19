@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoftSat.Pages.IncidenciasPage"
+             Title="Incidencias"
+             BackgroundColor="#C0C0C0"
+             NavigationPage.HasBackButton="False"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout>
+        <ListView x:Name="ListIncidencias"
+                  ItemsSource="{Binding Incidents}"
+                  HasUnevenRows="true">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding id}" Detail="{Binding descripcion}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

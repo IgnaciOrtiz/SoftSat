@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SoftSat.Pages.DetallesTareas"
+             Title="Detalle Tarea"
+              BackgroundColor="#E6FFE6">
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Id de Tarea:" 
+                   FontSize="Large" 
+                   Grid.Row="0" 
+                   Grid.Column="0"
+                   Padding="20"/>
+
+            <Label x:Name="IdLabel" 
+                   FontSize="Large" 
+                   Grid.Row="0" 
+                   Grid.Column="1"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"/>
+
+            <Label Text="Detalle:" 
+                   FontSize="Large" 
+                   Grid.Row="1" 
+                   Grid.Column="0"
+                   Padding="20"/>
+
+            <Label x:Name="DescripcionLabel" 
+                   FontSize="Medium" 
+                   Grid.Row="1" 
+                   Grid.Column="1"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"/>
+
+            <Frame Padding="10"
+                   Margin="10"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   BackgroundColor="White">
+
+                <Editor x:Name="ObservacionesEditor"         
+                    HeightRequest="200"
+                    AutoSize="TextChanges"
+                    IsTextPredictionEnabled="False"               
+                    Placeholder="{Binding Observaciones}"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Start"
+                    Keyboard="Text"/>
+            </Frame>
+
+
+            <Button Grid.Row="4"
+                    Text="Guardar"
+                    Margin="25"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BorderColor="Blue"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    Clicked="Button_Clicked_GuardarTarea"
+                    />
+
+            <Button Grid.Row="4"
+                    Text="Cerrar"
+                    Margin="25"
+                    Grid.Column="2"
+                    BackgroundColor="Blue"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    BorderColor="Blue"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    Clicked="Button_Clicked_CerrarTarea"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
